@@ -49,7 +49,7 @@ public class EnemyAI : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-		if(col.gameObject.tag == "Bullet" || col.gameObject.tag == "Player")
+		if(col.gameObject.tag == "Bullet")
 		{
 			// Instantiate the explosion and destroy the rocket.
 			Destroy (gameObject);

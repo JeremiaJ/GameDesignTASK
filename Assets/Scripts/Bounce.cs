@@ -2,16 +2,17 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Rocket : MonoBehaviour 
+public class Bounce : MonoBehaviour 
 {
 	public GameObject explosion;		// Prefab of explosion effect.
 	public static int score = 0;
 	public static GameObject c;
+	// Bounce 5 times
+	public int bounceCounter = 3;
 
 	void Start () 
 	{
 		// Destroy the rocket after 2 seconds if it doesn't get destroyed before then.
-		Destroy(gameObject, 4);
 	}
 
 
@@ -23,15 +24,23 @@ public class Rocket : MonoBehaviour
 		// Instantiate the explosion where the rocket is with the random rotation.
 		Instantiate(explosion, transform.position, randomRotation);
 	}
-	
+
 	void OnTriggerEnter2D (Collider2D col) 
 	{
-		if((col.gameObject.tag != "Player") && (col.gameObject.tag != "Item") && (col.gameObject.tag != "Bullet"))
-		{
+		if (col.gameObject.tag == "Enemy") {
 			score = score + 2;
 			// Instantiate the explosion and destroy the rocket.
-			OnExplode();
+			OnExplode ();
 			Destroy (gameObject);
+		} else if (col.gameObject.tag == "Bullet") {
+			OnExplode ();
+			Destroy (gameObject);
+		} else if ((col.gameObject.tag != "Player") && (col.gameObject.tag != "Item") && (col.gameObject.tag != "Bullet")) {
+			bounceCounter--;
+			if (bounceCounter == 0) {
+				OnExplode ();
+				Destroy (gameObject);
+			}
 		}
 
 	}
