@@ -1439,6 +1439,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1511307129 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852210577265562, guid: 8ad0c019f52e214449237bc598ee5686,
+    type: 2}
+  m_PrefabInternal: {fileID: 201534420}
+--- !u!114 &1511307130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1511307129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef474d77e998d4890bff85103fb4c947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  HP: 2
+  deadEnemy: {fileID: 0}
+  damagedEnemy: {fileID: 0}
+  deathClips: []
+  hundredPointsUI: {fileID: 0}
+  deathSpinMin: -100
+  deathSpinMax: 100
 --- !u!1 &1563330495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,6 +1582,30 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1711711570 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852210577265562, guid: 8ad0c019f52e214449237bc598ee5686,
+    type: 2}
+  m_PrefabInternal: {fileID: 128607881}
+--- !u!114 &1711711571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711711570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef474d77e998d4890bff85103fb4c947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  HP: 2
+  deadEnemy: {fileID: 0}
+  damagedEnemy: {fileID: 0}
+  deathClips: []
+  hundredPointsUI: {fileID: 0}
+  deathSpinMin: -100
+  deathSpinMax: 100
 --- !u!4 &1735330788 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4165919013531186, guid: e291f711a32e4b2498ddb982b3edc6b4,
