@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Galik_Walk
+  m_Name: Galik_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,23 +18,13 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.054054055
-      value: {fileID: 21300000, guid: 22ccf26db5587354e85ab16908badeee, type: 3}
-    - time: 0.21621622
-      value: {fileID: 21300000, guid: 61fec6e97e897d742b1d044464f55848, type: 3}
-    - time: 0.3783784
-      value: {fileID: 21300000, guid: f096db5c3fd74f7449b5ddda119df8b5, type: 3}
-    - time: 0.5405405
-      value: {fileID: 21300000, guid: 82b9ab39e7bb3084f848725a4b970fa4, type: 3}
-    - time: 0.7027027
-      value: {fileID: 21300000, guid: f096db5c3fd74f7449b5ddda119df8b5, type: 3}
-    - time: 0.8648649
-      value: {fileID: 21300000, guid: 22ccf26db5587354e85ab16908badeee, type: 3}
+    - time: 0
+      value: {fileID: 21300000, guid: b70dbc1927df583468e7a96cdaff4055, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 37
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -48,18 +38,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 22ccf26db5587354e85ab16908badeee, type: 3}
-    - {fileID: 21300000, guid: 61fec6e97e897d742b1d044464f55848, type: 3}
-    - {fileID: 21300000, guid: f096db5c3fd74f7449b5ddda119df8b5, type: 3}
-    - {fileID: 21300000, guid: 82b9ab39e7bb3084f848725a4b970fa4, type: 3}
-    - {fileID: 21300000, guid: f096db5c3fd74f7449b5ddda119df8b5, type: 3}
-    - {fileID: 21300000, guid: 22ccf26db5587354e85ab16908badeee, type: 3}
+    - {fileID: 21300000, guid: b70dbc1927df583468e7a96cdaff4055, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8918919
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,4 +65,11 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_IsEmpty: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
