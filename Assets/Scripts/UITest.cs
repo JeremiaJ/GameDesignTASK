@@ -12,7 +12,7 @@ public class UITest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyUp (KeyCode.LeftBracket))
-			HealthUI.GetComponent<HealthUI> ().TakeDamage ();
+			HealthUI.GetComponent<HealthUI>().TakeDamage ();
 		if (Input.GetKeyUp (KeyCode.RightBracket))
 			HealthUI.GetComponent<HealthUI>().RecoverHealth ();
 		if (Input.GetKeyUp (KeyCode.Semicolon))
