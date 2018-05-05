@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class IntroSeq : MonoBehaviour {
 	public Image IntroImage;
+	public string DesignatedLevel;
 
 	public List<RectTransform> LineMasks;
 
@@ -48,7 +50,6 @@ public class IntroSeq : MonoBehaviour {
 		if ((Input.anyKeyDown) && (!Animating) && (Animation == null)){
 			NextSeq();
 		}
-		Debug.Log(Animating);
 	}
 
 	IEnumerator AnimateLines(){
@@ -80,7 +81,7 @@ public class IntroSeq : MonoBehaviour {
 		ResetLineMasks();
 		pointer += 1;
 		if (pointer >= IntroSeqs.Count)
-			;//Change scene
+			SceneManager.LoadScene(DesignatedLevel, LoadSceneMode.Single);
 		IntroImage.sprite = IntroSeqs[pointer];
 	}
 }
