@@ -14,6 +14,10 @@ public class EnemyBullet : MonoBehaviour {
 		}
 	}
 
+	void Update () {
+		transform.Rotate (0, 0, 360 * Time.deltaTime);
+	}
+
 	public void Flip ()
 	{
 		// Switch the way the enemy is labelled as facing.
