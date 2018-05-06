@@ -8,7 +8,7 @@ public class EnemyBoss : MonoBehaviour {
 	public float fireRange = 25f;			// Enemy fire range
 	private float fireRate = 2f;
 	private float speed = 20f;				// The speed the rocket will fire at.
-	private int health = 10;
+
 	public bool facingRight = false;
 	private Animator anim;                  // Reference to the Animator component.
 	private Transform player;				// Reference to the player's transform.
@@ -20,21 +20,6 @@ public class EnemyBoss : MonoBehaviour {
 	private float meleeRate = 3f;			// Enemy charge rate
 	private float meleeRange = 3f;			// Enemy charge range
 	private BoxCollider2D col;
-
-
-	void OnTriggerEnter2D (Collider2D col) 
-	{
-		if(col.gameObject.tag == "Bullet")
-		{
-			health = health - 1;
-			// Instantiate the explosion and destroy the rocket.
-			if (health < 1) {
-				Destroy (gameObject);
-			}
-
-		}
-
-	}
 
 	void Awake ()
 	{
