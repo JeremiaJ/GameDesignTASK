@@ -14,10 +14,24 @@ public class EnemyZombie : MonoBehaviour {
 
 	private Transform player;				// Reference to the player's transform.
 	public float attackRange = 15f;			// Enemy attack range
-
+	private int health = 3;
 	public float moveRange = 30f;			// Enemy move range
 	public float maxSpeed = 2f;				// Enemy move speed
 	private float moveForce = 365f;			// Enemy move force
+
+	void OnTriggerEnter2D (Collider2D col) 
+	{
+		if(col.gameObject.tag == "Bullet")
+		{
+			health = health - 1;
+			// Instantiate the explosion and destroy the rocket.
+			if (health < 1) {
+				Destroy (gameObject);
+			}
+
+		}
+
+	}
 
 	void Awake ()
 	{
