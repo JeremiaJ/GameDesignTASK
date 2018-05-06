@@ -91,7 +91,8 @@ public class Gun : MonoBehaviour
 				}
 				//Rigidbody2D bulletInstance2 = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle2))) as Rigidbody2D;
 				//Rigidbody2D bulletInstance3 = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle3))) as Rigidbody2D;
-				CharInv.UseAmmo(1);
+				if (!CharInv.Unlimited)
+					CharInv.UseAmmo(1);
 			}
 		}
 	}

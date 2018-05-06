@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour {
 	[HideInInspector]
 	public bool EmptyInventory; //To indicate that the inventory is empty
 
+	public bool Unlimited;
+
 	// Use this for initialization
 	void Start () {
 		PointerChanged = false;
