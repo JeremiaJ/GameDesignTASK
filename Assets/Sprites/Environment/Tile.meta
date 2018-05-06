@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: da1f724b79ff26d47adc2b07bff2b874
 folderAsset: yes
 timeCreated: 1522822878
@@ -13,6 +14,14 @@ licenseType: Free
 DefaultImporter:
   externalObjects: {}
 >>>>>>> 772be93cb6c684a608d188de4405a3479afe4041
+=======
+guid: b7d30ac0b6a333d4a96986b8837e0ff6
+folderAsset: yes
+timeCreated: 1524976417
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> remotes/origin/enemyBoss
   userData: 
   assetBundleName: 
   assetBundleVariant: 
