@@ -378,7 +378,6 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-<<<<<<< HEAD:Assets/Animation/mainchar.controller
 --- !u!1102 &1102164358063737754
 AnimatorState:
   serializedVersion: 5
@@ -449,9 +448,6 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-=======
-  m_TimeParameter: 
->>>>>>> remotes/origin/enemyBoss:Assets/Animation/Controllers/mainchar.controller
 --- !u!1102 &1102639643777450504
 AnimatorState:
   serializedVersion: 5
@@ -479,7 +475,6 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-<<<<<<< HEAD:Assets/Animation/mainchar.controller
 --- !u!1102 &1102978660650047060
 AnimatorState:
   serializedVersion: 5
@@ -504,9 +499,6 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-=======
-  m_TimeParameter: 
->>>>>>> remotes/origin/enemyBoss:Assets/Animation/Controllers/mainchar.controller
 --- !u!1107 &1107770695791297090
 AnimatorStateMachine:
   serializedVersion: 5
