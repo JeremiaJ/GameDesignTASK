@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UITest : MonoBehaviour {
-	public GameObject HealthUI;
-	public Inventory Test;
+	public Health TestHealth;
+	public Inventory TestInv;
 	// Use this for initialization
 	void Start () {
 	}
@@ -12,16 +12,16 @@ public class UITest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyUp (KeyCode.LeftBracket))
-			HealthUI.GetComponent<HealthUI>().TakeDamage ();
+			TestHealth.TakeDamage (2);
 		if (Input.GetKeyUp (KeyCode.RightBracket))
-			HealthUI.GetComponent<HealthUI>().RecoverHealth ();
+			TestHealth.RecoverHealth (2);
 		if (Input.GetKeyUp (KeyCode.Semicolon))
-			Test.SwitchLeft();
+			TestInv.SwitchLeft();
 		if (Input.GetKeyUp (KeyCode.Quote))
-			Test.SwitchRight();
+			TestInv.SwitchRight();
 		if (Input.GetKeyUp (KeyCode.Period))
-			Test.UseAmmo(1);
+			TestInv.UseAmmo(1);
 		if (Input.GetKeyUp (KeyCode.Slash))
-			Test.GetWeapon(1, 1);
+			TestInv.GetWeapon(1, 1);
 	}
 }

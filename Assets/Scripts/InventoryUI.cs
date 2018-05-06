@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour {
-	public GameObject Weapon;
+	// public Image Weapon;
 	public Inventory CharInventory;
 	[Tooltip("The Size should be the same as WeaponTypes available, the same as in Inventory Script")]
 	public List<Sprite> WeaponsUI;
@@ -21,9 +21,9 @@ public class InventoryUI : MonoBehaviour {
 		if (CharInventory.PointerChanged) {
 			CharInventory.PointerChanged = false;
 			if (CharInventory.pointer != -1)
-				Weapon.GetComponent<Image> ().sprite = WeaponsUI [CharInventory.pointer];
+				this.GetComponent<Image>().sprite = WeaponsUI [CharInventory.pointer];
 			else
-				Weapon.GetComponent<Image> ().sprite = EmptyUI;
+				this.GetComponent<Image>().sprite = EmptyUI;
 		}
 	}
 }
