@@ -55,9 +55,11 @@ public class Enemyv2 : MonoBehaviour {
 		if (Random.Range (0f, 1f) <= chanceDrop1) {
 			Instantiate(item1, currentPosition, transform.rotation);
 		}
+		currentPosition.x += 3;
 		if (Random.Range (0f, 1f) <= chanceDrop2) {
 			Instantiate (item2, currentPosition, transform.rotation);
 		}
+		currentPosition.x -= 6;
 		if (Random.Range (0f, 1f) <= chanceDrop3) {
 			Instantiate (item3, currentPosition, transform.rotation);
 		}

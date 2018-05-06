@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1006556098255892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.816373, y: 19.15, z: 0}
+  m_LocalPosition: {x: -12.18, y: 18.99, z: 0}
   m_LocalScale: {x: 0.4790808, y: 0.4790808, z: 0.4790808}
   m_Children: []
   m_Father: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   item2: {fileID: 50148993869235682, guid: 8914ad9febc719b4bb571276f45b456f, type: 2}
   chanceDrop2: 0.7
   item3: {fileID: 50430455501784794}
-  chanceDrop3: 0.5
+  chanceDrop3: 0.2
 --- !u!212 &212473190179984214
 SpriteRenderer:
   m_ObjectHideFlags: 1
