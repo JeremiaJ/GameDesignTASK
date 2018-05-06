@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 	public int MaxHealth = 3;
+	[HideInInspector]
 	public int CurrentHealth;
 	[HideInInspector]
 	public bool HealthChanged; //to give signal to UI
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (CurrentHealth <= 0)
-			; //Handle death here
+			Destroy(this.gameObject); //Handle death here
 	}
 
 	public void TakeDamage (int damage) {
