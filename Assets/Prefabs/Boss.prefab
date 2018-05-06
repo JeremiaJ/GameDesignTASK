@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50430455501784794}
   - component: {fileID: 114253136041439806}
   - component: {fileID: 61008282297555854}
+  - component: {fileID: 61061083085198192}
+  - component: {fileID: 114475835595513782}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -38,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1006556098255892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.76, y: -7.119, z: 0}
+  m_LocalPosition: {x: -12.18, y: 18.99, z: 0}
   m_LocalScale: {x: 0.4790808, y: 0.4790808, z: 0.4790808}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,6 +91,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.62, y: 8.14}
   m_EdgeRadius: 0
+--- !u!61 &61061083085198192
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006556098255892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.62, y: 8.14}
+    newSize: {x: 4.62, y: 8.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.62, y: 8.14}
+  m_EdgeRadius: 0
 --- !u!95 &95420708978263004
 Animator:
   serializedVersion: 3
@@ -120,6 +147,26 @@ MonoBehaviour:
   flame: {fileID: 50137390072596160, guid: b9d12ee99404c1d4eb089fb98f61dc5f, type: 2}
   fireRange: 25
   facingRight: 0
+--- !u!114 &114475835595513782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006556098255892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088ed6d6839490a40b661f6b3d6c8dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  HP: 20
+  hundredPointsUI: {fileID: 0}
+  item1: {fileID: 50198158023788512, guid: b9cd614ce206c0b4783b03fd9bc022ac, type: 2}
+  chanceDrop1: 0.1
+  item2: {fileID: 50148993869235682, guid: 8914ad9febc719b4bb571276f45b456f, type: 2}
+  chanceDrop2: 0.7
+  item3: {fileID: 50430455501784794}
+  chanceDrop3: 0.2
 --- !u!212 &212473190179984214
 SpriteRenderer:
   m_ObjectHideFlags: 1
