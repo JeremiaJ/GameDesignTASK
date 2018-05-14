@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Gun : MonoBehaviour
 {
+	private float shootDelay = 0.33333f;
+	private float timestamp;
 	public Rigidbody2D rocket;				// Prefab of the rocket array.
 	public float speed = 1f;				// The speed the rocket will fire at.
 	public static float speedmodifier = 1f;
@@ -11,6 +13,7 @@ public class Gun : MonoBehaviour
 	private int currentWeapon = 0;
 	private movePlayer playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;                  // Reference to the Animator component.
+	private float animEnd;
     private Vector2 GetForceFrom(Vector3 fromPos, Vector3 toPos)
     {
         return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y)) * 25;
@@ -25,10 +28,27 @@ public class Gun : MonoBehaviour
 
 	void Update ()
 	{
+		// Set weapon shooting delay
+		// 0 = regular weapon
+		// 1 = multishoot pilus
+		// 2 = bouncy seblak
+		if (currentWeapon == 0) {
+			shootDelay = 0.5f;
+		} else if (currentWeapon == 1) {
+			shootDelay = 1.2f;
+		} else if (currentWeapon == 2) {
+			shootDelay = 1.5f;
+		}
+		if(Time.time >= animEnd)
+		{
+			//Instantiate my gun
+			movePlayer.animator.SetBool ("isThrowing", false);
+		}
 		facingRight = playerCtrl.facingRight;
 		// If the fire button is pressed (right click)...
 		if(Input.GetButtonDown("Fire2"))
 		{
+			timestamp = timestamp - 0.5f;
 			currentWeapon++;
 			if (currentWeapon >= weaponList.Length) {
 				currentWeapon = 0;
@@ -38,8 +58,11 @@ public class Gun : MonoBehaviour
 			//rocket = Instantiate (Resources.Load("/Bullets") as Rigidbody2D);
 		}
 		// If the fire button is pressed (left click)...
-		if(Input.GetButtonDown("Fire1"))
+		if((Time.time >= timestamp) && (Input.GetButtonDown("Fire1")))
 		{
+			movePlayer.animator.SetBool ("isThrowing", true);
+			timestamp = Time.time + shootDelay;
+			animEnd = Time.time + 0.3f;
 			// To check whether need to flip the player or not based on mouse click
 			Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
 			Vector3 PlayerPos = Camera.main.WorldToScreenPoint (playerCtrl.transform.position);

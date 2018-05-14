@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour
 	public float spawnTime = 5f;		// The amount of time between each spawn.
 	public float spawnDelay = 3f;		// The amount of time before spawning starts.
 	public GameObject[] enemies;		// Array of enemy prefabs.
-
-
+	public int spawnAmount = 3;
+	public int currentSpawn = 0;
 	void Start ()
 	{
 		// Start calling the Spawn function repeatedly after a delay .
@@ -18,13 +18,17 @@ public class Spawner : MonoBehaviour
 	void Spawn ()
 	{
 		// Instantiate a random enemy.
-		int enemyIndex = Random.Range(0, enemies.Length);
-		Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
+		if (currentSpawn < spawnAmount) {
+			int enemyIndex = Random.Range(0, enemies.Length);
+			Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
 
-		// Play the spawning effect from all of the particle systems.
-		foreach(ParticleSystem p in GetComponentsInChildren<ParticleSystem>())
-		{
-			p.Play();
+			// Play the spawning effect from all of the particle systems.
+			foreach(ParticleSystem p in GetComponentsInChildren<ParticleSystem>())
+			{
+				p.Play();
+			}
+			currentSpawn++;
 		}
+
 	}
 }
