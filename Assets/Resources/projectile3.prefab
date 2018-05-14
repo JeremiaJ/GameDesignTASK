@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92caa013b82cac44da24eea013fc0c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
+  explosion: {fileID: 1157482638914730, guid: d4e98f40107aac844bc8269322a09d1d, type: 2}
   bounceCounter: 5
 --- !u!212 &212136167487298306
 SpriteRenderer:
