@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1665868078236846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.687418, y: 18.51, z: 0}
+  m_LocalPosition: {x: 1.0518677, y: -11.26, z: 0}
   m_LocalScale: {x: 0.72054046, y: 0.72054046, z: 0.72054046}
   m_Children: []
   m_Father: {fileID: 0}
@@ -146,13 +146,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   HP: 2
-  hundredPointsUI: {fileID: 0}
   item1: {fileID: 50198158023788512, guid: b9cd614ce206c0b4783b03fd9bc022ac, type: 2}
-  chanceDrop1: 0.05
-  item2: {fileID: 50148993869235682}
-  chanceDrop2: 0.1
+  chanceDrop1: 0.1
+  item2: {fileID: 50198158023788512, guid: 4274c9d17d6164241a9dfeac161f428c, type: 2}
+  chanceDrop2: 0.2
   item3: {fileID: 50148993869235682}
   chanceDrop3: 0.05
+  ObjectiveCleared: {fileID: 0}
+  Character: {fileID: 0}
 --- !u!114 &114315921685944734
 MonoBehaviour:
   m_ObjectHideFlags: 1

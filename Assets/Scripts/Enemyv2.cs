@@ -6,9 +6,9 @@ public class Enemyv2 : MonoBehaviour {
 
 	public float moveSpeed = 2f;		// The speed the enemy moves at.
 	public int HP = 2;					// How many times the enemy can be hit before it dies.
-	public GameObject hundredPointsUI;	// A prefab of 100 that appears when the enemy dies.
+	// public GameObject hundredPointsUI;	// A prefab of 100 that appears when the enemy dies.
 
-	private Score score;				// Reference to the Score script.
+	// private Score score;				// Reference to the Score script.
 	public Rigidbody2D item1;
 	public float chanceDrop1 = 0f;
 	public Rigidbody2D item2;

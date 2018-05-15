@@ -16,6 +16,8 @@ public class Inventory : MonoBehaviour {
 	[HideInInspector]
 	public bool PointerChanged; //To give signal to InventoryUI that the player has changed weapon
 	[HideInInspector]
+	public bool AmmoChanged; //To give signal to InventoryUI to change the ammo indicator
+	[HideInInspector]
 	public bool PointerChangedSignal; //For signal from/to Gun.cs Script
 	[HideInInspector]
 	public bool EmptyInventory; //To indicate that the inventory is empty
@@ -23,7 +25,6 @@ public class Inventory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PointerChanged = false;
 		Inventories = new List<int> ();
 		foreach (int amount in InitInventories)
 			Inventories.Add (amount);
@@ -36,8 +37,9 @@ public class Inventory : MonoBehaviour {
 		EmptyInventory = IsAllEmpty ();
 		if (EmptyInventory) {
 			pointer = -1;
-			PointerChanged = true;
 		}
+		PointerChanged = true;
+		AmmoChanged = true;
 	}
 	
 	// Update is called once per frame
@@ -55,10 +57,12 @@ public class Inventory : MonoBehaviour {
 					pointer = -1;
 					PointerChanged = true;
 					PointerChangedSignal = true;
+					AmmoChanged = true;
 				}
 				else
 					SwitchRight();
-			}
+			} else
+				AmmoChanged = true;
 		}
 	}
 
@@ -72,6 +76,7 @@ public class Inventory : MonoBehaviour {
 			PointerChanged = true;
 			PointerChangedSignal = true;
 		}
+		AmmoChanged = true;
 	}
 
 	public void SwitchLeft () {

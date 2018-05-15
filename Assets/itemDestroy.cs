@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class itemDestroy : MonoBehaviour {
-
+	public int type;// 0-2 = weapon, 3 = health
 	// Use this for initialization
 	void Start () {
 		
