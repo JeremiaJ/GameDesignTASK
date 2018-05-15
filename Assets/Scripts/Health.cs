@@ -8,6 +8,11 @@ public class Health : MonoBehaviour {
 	public int CurrentHealth;
 	[HideInInspector]
 	public bool HealthChanged; //to give signal to UI
+	public GameObject GameOver; //reference to the game Over canvas
+
+	void Awake () {
+		GameOver.SetActive(false);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +22,11 @@ public class Health : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (CurrentHealth <= 0)
-			Destroy(gameObject); //Handle death here
+		//Handle death here
+		if (CurrentHealth <= 0){
+			Destroy(gameObject);
+			GameOver.SetActive(true);
+		}
 	}
 
 	public void TakeDamage (int damage) {
