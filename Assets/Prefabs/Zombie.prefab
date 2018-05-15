@@ -152,7 +152,7 @@ MonoBehaviour:
   item2: {fileID: 50148993869235682}
   chanceDrop2: 0.1
   item3: {fileID: 50148993869235682}
-  chanceDrop3: 0.2
+  chanceDrop3: 0.05
 --- !u!114 &114315921685944734
 MonoBehaviour:
   m_ObjectHideFlags: 1
