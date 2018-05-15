@@ -339,6 +339,7 @@ MonoBehaviour:
   Inventories: 
   pointer: 0
   PointerChanged: 0
+  AmmoChanged: 0
   PointerChangedSignal: 0
   EmptyInventory: 0
   Unlimited: 0
@@ -459,7 +460,9 @@ Prefab:
       propertyPath: shootDelay
       value: 0.33333
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114016094036501488, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
+    - {fileID: 114244209628831976, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &350022244 stripped

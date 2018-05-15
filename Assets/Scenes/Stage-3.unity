@@ -220,25 +220,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1576546620491798, guid: e291f711a32e4b2498ddb982b3edc6b4,
     type: 2}
   m_PrefabInternal: {fileID: 350022243}
---- !u!114 &186256745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 186256744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad2feec203e3774fb42653c76c1faf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxInventories: 090000000900000009000000
-  InitInventories: 090000000900000009000000
-  Inventories: 
-  pointer: 0
-  PointerChanged: 0
-  PointerChangedSignal: 0
-  EmptyInventory: 0
-  Unlimited: 0
 --- !u!114 &186256746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +519,8 @@ Prefab:
       propertyPath: shootDelay
       value: 0.33333
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114016094036501488, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &369906850
@@ -2921,7 +2903,7 @@ Prefab:
         type: 2}
       propertyPath: CharInventory
       value: 
-      objectReference: {fileID: 186256745}
+      objectReference: {fileID: 0}
     - target: {fileID: 114589352179098748, guid: 0f95561f5bd0df048a930365fdabbb73,
         type: 2}
       propertyPath: CharHealth
