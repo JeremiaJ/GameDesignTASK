@@ -15,7 +15,11 @@ public class Inventory : MonoBehaviour {
 	public int pointer = 0; //To indicate what weapon the player is using, type 0 is the default weapon, -1 if the inventory is empty
 	[HideInInspector]
 	public bool PointerChanged; //To give signal to InventoryUI that the player has changed weapon
-	private bool EmptyInventory; //To indicate that the inventory is empty
+	[HideInInspector]
+	public bool PointerChangedSignal; //For signal from/to Gun.cs Script
+	[HideInInspector]
+	public bool EmptyInventory; //To indicate that the inventory is empty
+	public bool Unlimited;
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +54,7 @@ public class Inventory : MonoBehaviour {
 				if (EmptyInventory) {
 					pointer = -1;
 					PointerChanged = true;
+					PointerChangedSignal = true;
 				}
 				else
 					SwitchRight();
@@ -65,6 +70,7 @@ public class Inventory : MonoBehaviour {
 			EmptyInventory = false;
 			pointer = type;
 			PointerChanged = true;
+			PointerChangedSignal = true;
 		}
 	}
 
@@ -76,6 +82,7 @@ public class Inventory : MonoBehaviour {
 					pointer = Inventories.Count - 1;
 			} while (Inventories [pointer] <= 0) ;
 			PointerChanged = true;
+			PointerChangedSignal = true;
 		}
 	}
 
@@ -87,6 +94,7 @@ public class Inventory : MonoBehaviour {
 					pointer = 0;
 			} while (Inventories [pointer] <= 0) ;
 			PointerChanged = true;
+			PointerChangedSignal = true;
 		}
 	}
 

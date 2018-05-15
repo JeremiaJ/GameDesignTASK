@@ -10,10 +10,12 @@ public class Gun : MonoBehaviour
 	public static float speedmodifier = 1f;
 	public bool facingRight = true;
 	private string[] weaponList = new string[]{"projectile1", "projectile2", "projectile3"};
-	private int currentWeapon = 0;
+	// private int currentWeapon = 0;
 	private movePlayer playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;                  // Reference to the Animator component.
 	private float animEnd;
+	private Inventory CharInv;
+
     private Vector2 GetForceFrom(Vector3 fromPos, Vector3 toPos)
     {
         return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y)) * 25;
@@ -22,6 +24,7 @@ public class Gun : MonoBehaviour
     void Awake()
 	{
 		playerCtrl = transform.root.GetComponent<movePlayer>();
+		CharInv = transform.root.GetComponent<Inventory>();
 		speed = 2f;				// The speed the rocket will fire at.
 	}
 
@@ -32,11 +35,14 @@ public class Gun : MonoBehaviour
 		// 0 = regular weapon
 		// 1 = multishoot pilus
 		// 2 = bouncy seblak
-		if (currentWeapon == 0) {
+		// if (currentWeapon == 0) {
+		if (CharInv.pointer == 0) {
 			shootDelay = 0.5f;
-		} else if (currentWeapon == 1) {
+		// } else if (currentWeapon == 1) {
+		} else if (CharInv.pointer == 1) {
 			shootDelay = 1.2f;
-		} else if (currentWeapon == 2) {
+		// } else if (currentWeapon == 2) {
+		} else if (CharInv.pointer == 2) {
 			shootDelay = 1.5f;
 		}
 		if(Time.time >= animEnd)
@@ -49,16 +55,15 @@ public class Gun : MonoBehaviour
 		if(Input.GetButtonDown("Fire2"))
 		{
 			timestamp = timestamp - 0.5f;
-			currentWeapon++;
-			if (currentWeapon >= weaponList.Length) {
-				currentWeapon = 0;
-			}
-			GameObject asset = Resources.Load (weaponList[currentWeapon]) as GameObject;
+			CharInv.SwitchRight();
+		}
+		if (CharInv.PointerChangedSignal) {
+			GameObject asset = Resources.Load (weaponList[CharInv.pointer]) as GameObject;
 			rocket = asset.GetComponent<Rigidbody2D>();
-			//rocket = Instantiate (Resources.Load("/Bullets") as Rigidbody2D);
+			CharInv.PointerChangedSignal = false;
 		}
 		// If the fire button is pressed (left click)...
-		if((Time.time >= timestamp) && (Input.GetButtonDown("Fire1")))
+		if((Time.time >= timestamp) && (Input.GetButtonDown("Fire1")) && (!CharInv.EmptyInventory))
 		{
 			movePlayer.animator.SetBool ("isThrowing", true);
 			timestamp = Time.time + shootDelay;
@@ -90,11 +95,11 @@ public class Gun : MonoBehaviour
             float angle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
 			//float angle2 = Mathf.Atan2(vel.y + 25, vel.x) * Mathf.Rad2Deg;
 			//float angle3 = Mathf.Atan2(vel.y - 25, vel.x) * Mathf.Rad2Deg;
-			if (currentWeapon == 0) {
+			if (CharInv.pointer == 0) {
 				// Keripik Kentang
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle))) as Rigidbody2D;
 				bulletInstance.velocity = new Vector2(shootDirection.x * speed, shootDirection.y * speed * speedmodifier);
-			} else if (currentWeapon == 1) {
+			} else if (CharInv.pointer == 1) {
 				// Pilus
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle))) as Rigidbody2D;
 				Rigidbody2D bulletInstance2 = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle))) as Rigidbody2D;
@@ -102,15 +107,15 @@ public class Gun : MonoBehaviour
 				bulletInstance.velocity = new Vector2(shootDirection.x * speed * 1.2f, shootDirection.y * speed * 1.0f * speedmodifier);
 				bulletInstance2.velocity = new Vector2(shootDirection.x * speed * 1.2f, shootDirection.y * speed * 1.5f * speedmodifier);
 				bulletInstance3.velocity = new Vector2(shootDirection.x * speed * 1.2f, shootDirection.y * speed * 0.5f * speedmodifier);
-			} else if (currentWeapon == 2) {
+			} else if (CharInv.pointer == 2) {
 				// Bomb
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle))) as Rigidbody2D;
 				bulletInstance.velocity = new Vector2(shootDirection.x * speed * 0.8f, shootDirection.y * speed * 0.8f * speedmodifier);
 			}
 			//Rigidbody2D bulletInstance2 = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle2))) as Rigidbody2D;
 			//Rigidbody2D bulletInstance3 = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0, 0, angle3))) as Rigidbody2D;
-            
-
+            if (!CharInv.Unlimited)
+            	CharInv.UseAmmo(1);
 		}
 	}
 }

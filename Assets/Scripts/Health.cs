@@ -18,7 +18,7 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (CurrentHealth <= 0)
-			; //Handle death here
+			Destroy(gameObject); //Handle death here
 	}
 
 	public void TakeDamage (int damage) {
