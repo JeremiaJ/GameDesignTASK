@@ -42,7 +42,7 @@ public class Enemyv2 : MonoBehaviour {
 		}
 	}
 
-	void Death()
+	public void Death()
 	{
 		DropItem ();
 		Destroy (gameObject);
@@ -51,7 +51,7 @@ public class Enemyv2 : MonoBehaviour {
 	void DropItem()
 	{
 		Vector3 currentPosition = transform.position;
-		currentPosition.y += 5;
+		currentPosition.y += 1f;
 		if (Random.Range (0f, 1f) <= chanceDrop1) {
 			Instantiate(item1, currentPosition, transform.rotation);
 		}

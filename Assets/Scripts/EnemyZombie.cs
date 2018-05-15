@@ -19,11 +19,22 @@ public class EnemyZombie : MonoBehaviour {
 	public float maxSpeed = 2f;				// Enemy move speed
 	private float moveForce = 365f;			// Enemy move force
 
+	private Transform groundCheck;			// A position marking where to check if the player is grounded.
+	private bool grounded = false;			// Whether or not the player is grounded.
+	private float deathTimer = 0;
+	private float deathTimeToWait = 0.1f;
+	private bool death;
+
+	private Enemyv2 enemyScript;
+
+
 	void Awake ()
 	{
 		// Setting up the reference.
+		groundCheck = transform.Find("groundCheck");
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		anim = GetComponent<Animator>();
+		enemyScript = GetComponent<Enemyv2>();
 	}
 
 	float CheckRange ()
@@ -125,4 +136,26 @@ public class EnemyZombie : MonoBehaviour {
 	{
 		StartCoroutine (Shoot ());
 	}
+
+
+	void Update()
+	{
+		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
+		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
+
+		// If the jump button is pressed and the player is grounded then the player should jump.
+		if (grounded) {
+			deathTimer = 0;
+		} else {
+			deathTimer += Time.deltaTime;
+			if (deathTimer >= deathTimeToWait)
+			{
+				death = true;
+			}
+		}
+		if (death) {
+			enemyScript.Death ();
+		}
+	}
+
 }
