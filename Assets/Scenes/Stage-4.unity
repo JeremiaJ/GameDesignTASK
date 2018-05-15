@@ -2257,18 +2257,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114553798594917060, guid: 0f95561f5bd0df048a930365fdabbb73,
-        type: 2}
-      propertyPath: CharInventory
-      value: 
-      objectReference: {fileID: 186256745}
     - target: {fileID: 114589352179098748, guid: 0f95561f5bd0df048a930365fdabbb73,
         type: 2}
       propertyPath: CharHealth
       value: 
       objectReference: {fileID: 186256746}
-    m_RemovedComponents:
-    - {fileID: 114068928590843926, guid: 0f95561f5bd0df048a930365fdabbb73, type: 2}
+    - target: {fileID: 114553798594917060, guid: 0f95561f5bd0df048a930365fdabbb73,
+        type: 2}
+      propertyPath: CharInventory
+      value: 
+      objectReference: {fileID: 186256745}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f95561f5bd0df048a930365fdabbb73, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1530375523
