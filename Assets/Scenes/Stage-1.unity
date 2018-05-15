@@ -231,8 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad2feec203e3774fb42653c76c1faf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxInventories: 090000000900000009000000
-  InitInventories: 090000000900000009000000
+  MaxInventories: 640000001400000014000000
+  InitInventories: 640000001400000014000000
   Inventories: 
   pointer: 0
   PointerChanged: 0
@@ -439,6 +439,16 @@ Prefab:
         type: 2}
       propertyPath: shootDelay
       value: 0.33333
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690001652522514, guid: e291f711a32e4b2498ddb982b3edc6b4,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114690001652522514, guid: e291f711a32e4b2498ddb982b3edc6b4,
+        type: 2}
+      propertyPath: jumpForce
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
