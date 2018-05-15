@@ -16,11 +16,13 @@ public class Enemyv2 : MonoBehaviour {
 	public Rigidbody2D item3;
 	public float chanceDrop3 = 0f;
 
+	public GameObject ObjectiveCleared; //for reference when the boss has been defeated
+	public movePlayer Character; //for making the main character invincible when the boss has been defeated
 
 	void Awake()
 	{
 		// Setting up the references.
-		score = GameObject.Find("Score").GetComponent<Score>();
+		// score = GameObject.Find("Score").GetComponent<Score>();
 	}
 
 	void OnTriggerEnter2D (Collider2D col) 
@@ -45,6 +47,10 @@ public class Enemyv2 : MonoBehaviour {
 	public void Death()
 	{
 		DropItem ();
+		if (gameObject.name == "Boss"){
+			ObjectiveCleared.SetActive(true);
+			Character.invicible = true;
+		}
 		Destroy (gameObject);
 	}
 

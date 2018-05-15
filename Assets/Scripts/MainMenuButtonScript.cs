@@ -9,4 +9,8 @@ public class MainMenuButtonScript : MonoBehaviour {
 	public void ChangeScene() {
 		SceneManager.LoadScene(ChangeSceneName, LoadSceneMode.Single);
 	}
+
+	public void ReplayScene() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+	}	
 }
