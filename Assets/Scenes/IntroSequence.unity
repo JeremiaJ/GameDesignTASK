@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IntroImage: {fileID: 808771883}
-  DesignatedLevel: Level
+  DesignatedLevel: Stage-1
   LineMasks:
   - {fileID: 88581267}
   - {fileID: 42582433}
