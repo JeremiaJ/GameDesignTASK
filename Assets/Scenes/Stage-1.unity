@@ -215,18 +215,6 @@ PolygonCollider2D:
       - {x: -4.63, y: -4.63}
       - {x: 4.63, y: -4.63}
       - {x: 4.63, y: 4.63}
---- !u!114 &186256745 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114244209628831976, guid: e291f711a32e4b2498ddb982b3edc6b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 350022243}
-  m_Script: {fileID: 11500000, guid: 0ad2feec203e3774fb42653c76c1faf3, type: 3}
---- !u!114 &186256746 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114016094036501488, guid: e291f711a32e4b2498ddb982b3edc6b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 350022243}
-  m_Script: {fileID: 11500000, guid: b028a68d1e765604b89ad08e5a3eb91c, type: 3}
 --- !u!114 &186256752 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114690001652522514, guid: e291f711a32e4b2498ddb982b3edc6b4,
@@ -3248,12 +3236,12 @@ Prefab:
         type: 2}
       propertyPath: CharInventory
       value: 
-      objectReference: {fileID: 186256745}
+      objectReference: {fileID: 1810107587}
     - target: {fileID: 114589352179098748, guid: 0f95561f5bd0df048a930365fdabbb73,
         type: 2}
       propertyPath: CharHealth
       value: 
-      objectReference: {fileID: 186256746}
+      objectReference: {fileID: 1810107588}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f95561f5bd0df048a930365fdabbb73, type: 2}
   m_IsPrefabParent: 0
@@ -3872,6 +3860,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ad0c019f52e214449237bc598ee5686, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1810107586 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1576546620491798, guid: e291f711a32e4b2498ddb982b3edc6b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 350022243}
+--- !u!114 &1810107587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810107586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad2feec203e3774fb42653c76c1faf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxInventories: 090000000900000009000000
+  InitInventories: 090000000900000009000000
+  Inventories: 
+  pointer: 0
+  PointerChanged: 0
+  AmmoChanged: 0
+  PointerChangedSignal: 0
+  EmptyInventory: 0
+  Unlimited: 0
+--- !u!114 &1810107588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810107586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b028a68d1e765604b89ad08e5a3eb91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 3
+  CurrentHealth: 0
+  HealthChanged: 0
+  GameOver: {fileID: 2071219095}
 --- !u!1 &1875220378
 GameObject:
   m_ObjectHideFlags: 0
