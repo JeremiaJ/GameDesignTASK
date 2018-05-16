@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
-	public int MaxHealth = 3;
+	public int MaxHealth = 5;
 	public int CurrentHealth;
 	[HideInInspector]
 	public bool HealthChanged; //to give signal to UI

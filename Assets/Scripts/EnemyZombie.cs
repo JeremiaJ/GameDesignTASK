@@ -7,7 +7,7 @@ public class EnemyZombie : MonoBehaviour {
 
 	public Rigidbody2D flame;				// Prefab of the flame.
 	public float fireRate = 3f;
-	private float speed = 25f;				// The speed the rocket will fire at.
+	private float speed = 20f;				// The speed the rocket will fire at.
 	public bool facingRight = false;
 
 	private Animator anim;                  // Reference to the Animator component.

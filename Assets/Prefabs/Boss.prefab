@@ -159,14 +159,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  HP: 20
-  hundredPointsUI: {fileID: 0}
+  HP: 10
   item1: {fileID: 50198158023788512, guid: b9cd614ce206c0b4783b03fd9bc022ac, type: 2}
   chanceDrop1: 0.1
   item2: {fileID: 50148993869235682, guid: 8914ad9febc719b4bb571276f45b456f, type: 2}
   chanceDrop2: 0.4
   item3: {fileID: 50430455501784794}
   chanceDrop3: 0.1
+  ObjectiveCleared: {fileID: 0}
+  Character: {fileID: 0}
 --- !u!212 &212473190179984214
 SpriteRenderer:
   m_ObjectHideFlags: 1

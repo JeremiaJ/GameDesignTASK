@@ -37,13 +37,13 @@ public class Gun : MonoBehaviour
 		// 2 = bouncy seblak
 		// if (currentWeapon == 0) {
 		if (CharInv.pointer == 0) {
-			shootDelay = 0.5f;
+			shootDelay = 0.3f;
 		// } else if (currentWeapon == 1) {
 		} else if (CharInv.pointer == 1) {
-			shootDelay = 1.2f;
+			shootDelay = 0.75f;
 		// } else if (currentWeapon == 2) {
 		} else if (CharInv.pointer == 2) {
-			shootDelay = 1.5f;
+			shootDelay = 1f;
 		}
 		if(Time.time >= animEnd)
 		{
