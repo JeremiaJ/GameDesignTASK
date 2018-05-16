@@ -397,12 +397,17 @@ Prefab:
     - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
         type: 2}
       propertyPath: m_GravityScale
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
         type: 2}
       propertyPath: m_Mass
-      value: 1.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
@@ -4852,24 +4857,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1182501571003544, guid: e291f711a32e4b2498ddb982b3edc6b4,
     type: 2}
   m_PrefabInternal: {fileID: 350022243}
---- !u!68 &2131509633
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2131509632}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.75236934, y: 2.1271071}
-  - {x: -2.194475, y: 2.2352653}
-  - {x: 1.6176343, y: 2.1631613}
 --- !u!114 &2131509634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4881,3 +4868,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ae8988f27135e4dab05aad0aaf9359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &2131509635
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2131509632}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3151188, y: 1.8066726}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.8234262, y: 0.5798389}
+  m_EdgeRadius: 0

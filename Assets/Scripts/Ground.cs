@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour {
 
-	private bool isOnGround = false;
+	private bool isOnGround = true;
 
-	void OnTrigerStay2D() {
+	void OnTriggerEnter2D() {
 		isOnGround = true;
 	}
 
-	void OnTrigerExit2D(){
+	void OnTriggerStay2D() {
+		isOnGround = true;
+	}
+
+	void OnTriggerExit2D(){
 		isOnGround = false;
 	}
 
