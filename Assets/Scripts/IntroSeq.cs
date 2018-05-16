@@ -46,10 +46,11 @@ public class IntroSeq : MonoBehaviour {
 			Animation = AnimateLines();
 			StartCoroutine(Animation);
 		}
-		
 		if ((Input.anyKeyDown) && (!Animating) && (Animation == null)){
 			NextSeq();
 		}
+		if (Input.GetKeyUp(KeyCode.Escape))
+			SceneManager.LoadScene(DesignatedLevel, LoadSceneMode.Single);
 	}
 
 	IEnumerator AnimateLines(){
