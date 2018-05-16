@@ -384,31 +384,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114016094036501488, guid: e291f711a32e4b2498ddb982b3edc6b4,
+    - target: {fileID: 114293901724897386, guid: e291f711a32e4b2498ddb982b3edc6b4,
         type: 2}
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 2071219095}
-    - target: {fileID: 114690001652522514, guid: e291f711a32e4b2498ddb982b3edc6b4,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
-        type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50624617963615744, guid: e291f711a32e4b2498ddb982b3edc6b4,
-        type: 2}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e291f711a32e4b2498ddb982b3edc6b4, type: 2}
   m_IsPrefabParent: 0
@@ -3907,46 +3887,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1810107586 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1576546620491798, guid: e291f711a32e4b2498ddb982b3edc6b4,
+--- !u!114 &1810107587 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114439290435470772, guid: e291f711a32e4b2498ddb982b3edc6b4,
     type: 2}
   m_PrefabInternal: {fileID: 350022243}
---- !u!114 &1810107587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1810107586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad2feec203e3774fb42653c76c1faf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxInventories: f4010000c8000000c8000000
-  InitInventories: c80000003200000032000000
-  Inventories: 
-  pointer: 0
-  PointerChanged: 0
-  AmmoChanged: 0
-  PointerChangedSignal: 0
-  EmptyInventory: 0
-  Unlimited: 0
---- !u!114 &1810107588
+--- !u!114 &1810107588 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1810107586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114293901724897386, guid: e291f711a32e4b2498ddb982b3edc6b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 350022243}
   m_Script: {fileID: 11500000, guid: b028a68d1e765604b89ad08e5a3eb91c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 5
-  CurrentHealth: 0
-  HealthChanged: 0
-  GameOver: {fileID: 2071219095}
 --- !u!1 &1875220378
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,44 +4804,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2131509632 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1182501571003544, guid: e291f711a32e4b2498ddb982b3edc6b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 350022243}
---- !u!114 &2131509634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2131509632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ae8988f27135e4dab05aad0aaf9359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &2131509635
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2131509632}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3151188, y: 1.8066726}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.8234262, y: 0.5798389}
-  m_EdgeRadius: 0
