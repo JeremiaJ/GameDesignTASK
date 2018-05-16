@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Destroyer : MonoBehaviour
 {
-	public bool destroyOnAwake;			// Whether or not this gameobject should destroyed after a delay, on Awake.
-	public float awakeDestroyDelay;		// The delay for destroying it on Awake.
+	public bool destroyOnAwake = true;			// Whether or not this gameobject should destroyed after a delay, on Awake.
+	public float awakeDestroyDelay = 1f;		// The delay for destroying it on Awake.
 	public bool findChild = false;				// Find a child game object and delete it
 	public string namedChild;			// Name the child object in Inspector
 
